@@ -1,0 +1,34 @@
+:root {
+  --ink: #0b0d1c;
+  --dusk: #171a33;
+  --starlight: #f1e9d6;
+  --haze: #9aa0bd;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Hanken Grotesk", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: var(--ink); color: var(--starlight); font-family: var(--sans); overflow: hidden; }
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+canvas:active { cursor: grabbing; }
+header { position: fixed; top: 20px; left: 24px; pointer-events: none; max-width: 24rem; }
+h1 { margin: 0; font: italic 400 2.4rem/1 var(--serif); letter-spacing: -0.01em; }
+header p { margin: .4rem 0 0; color: var(--haze); font-size: .9rem; }
+#searchbox { position: fixed; top: 20px; right: 24px; width: min(18rem, 50vw); }
+#search { width: 100%; padding: .6rem .8rem; border: 1px solid #2c3058; border-radius: 6px; background: var(--dusk); color: var(--starlight); font: inherit; }
+#search:focus-visible, button:focus-visible { outline: 2px solid var(--starlight); outline-offset: 2px; }
+#results { list-style: none; margin: 4px 0 0; padding: 0; background: var(--dusk); border-radius: 6px; }
+#results button { display: block; width: 100%; padding: .5rem .8rem; text-align: left; }
+button { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; }
+button:hover { background: #22264a; }
+#tip { position: fixed; pointer-events: none; padding: .45rem .65rem; background: var(--dusk); border: 1px solid #2c3058; border-radius: 6px; font-size: .85rem; max-width: 16rem; }
+#tip b { font: italic 400 1rem/1.2 var(--serif); display: block; }
+#tip span { color: var(--haze); }
+#panel { position: fixed; left: 24px; bottom: 56px; width: min(20rem, calc(100vw - 48px)); padding: 1rem; background: var(--dusk); border: 1px solid #2c3058; border-radius: 8px; }
+#panel h2 { margin: 0; font: italic 400 1.35rem/1.2 var(--serif); }
+#panel p { margin: .25rem 0 .75rem; color: var(--haze); font-size: .85rem; }
+#panel h3 { margin: 0 0 .25rem; font-size: .8rem; font-weight: 600; color: var(--haze); }
+#panel button { display: block; width: 100%; padding: .3rem .4rem; text-align: left; font-size: .85rem; border-radius: 4px; }
+#note { position: fixed; left: 24px; bottom: 16px; margin: 0; color: var(--haze); font-size: .75rem; max-width: calc(100vw - 48px); }
+#empty { position: fixed; inset: 0; display: grid; place-items: center; text-align: center; padding: 2rem; }
+code { background: var(--dusk); padding: .1rem .35rem; border-radius: 4px; }
+[hidden] { display: none !important; }

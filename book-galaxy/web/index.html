@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Galaxy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Hanken+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sky" aria-label="Map of 10,000 books placed near others readers shelve them with"></canvas>
+  <header>
+    <h1>Book Galaxy</h1>
+    <p>Ten thousand books, placed by what readers say they are.</p>
+  </header>
+  <div id="searchbox">
+    <input id="search" type="search" placeholder="Find a title or author" autocomplete="off" aria-label="Search books">
+    <ul id="results"></ul>
+  </div>
+  <div id="tip" hidden></div>
+  <aside id="panel" hidden></aside>
+  <p id="note">Data: goodbooks-10k, a 2017 snapshot of Goodreads. Scroll to zoom, drag to move, click a book to see its neighbors.</p>
+  <div id="empty" hidden><p id="empty-msg">No data yet. Run <code>python pipeline/build_galaxy.py</code> to create <code>web/data.json</code>, then reload.</p></div>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+.git
+.venv
+data
+pipeline
+__pycache__
+README.md
